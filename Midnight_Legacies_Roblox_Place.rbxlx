@@ -1,0 +1,1593 @@
+<?xml version='1.0' encoding='utf-8'?>
+<roblox version="4">
+  <Item class="Workspace" referent="RBX0b7fe69143dc49048887">
+    <Properties>
+      <string name="Name">Workspace</string>
+    </Properties>
+    <Item class="Part" referent="RBX0a6c20e0dfab4b03b494">
+      <Properties>
+        <string name="Name">Midnight Valley Ground</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {0, -2, 0}}</CoordinateFrame>
+        <Vector3 name="Size">500, 4, 500</Vector3>
+        <Color3 name="Color">0.12, 0.2, 0.16</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX48bdd2f23a2540d7b6bc">
+      <Properties>
+        <string name="Name">Town Square</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {0, 0, 0}}</CoordinateFrame>
+        <Vector3 name="Size">90, 1, 70</Vector3>
+        <Color3 name="Color">0.25, 0.25, 0.28</Color3>
+        <token name="Material">1088</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX6020ece5b8d546549dd8">
+      <Properties>
+        <string name="Name">Main Road</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {0, 0.05, 65}}</CoordinateFrame>
+        <Vector3 name="Size">18, 0.2, 250</Vector3>
+        <Color3 name="Color">0.08, 0.08, 0.11</Color3>
+        <token name="Material">816</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXb26ef5541e6a44bfbf77">
+      <Properties>
+        <string name="Name">Cross Road</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {0, 0.06, 0}}</CoordinateFrame>
+        <Vector3 name="Size">250, 0.2, 14</Vector3>
+        <Color3 name="Color">0.08, 0.08, 0.11</Color3>
+        <token name="Material">816</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX7a4b1782b72c416c95a3">
+      <Properties>
+        <string name="Name">North Road</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {0, 0.05, -90}}</CoordinateFrame>
+        <Vector3 name="Size">14, 0.2, 70</Vector3>
+        <Color3 name="Color">0.08, 0.08, 0.11</Color3>
+        <token name="Material">816</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXf82434229ca946c39b1e">
+      <Properties>
+        <string name="Name">East Road</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {95, 0.05, 0}}</CoordinateFrame>
+        <Vector3 name="Size">80, 0.2, 14</Vector3>
+        <Color3 name="Color">0.08, 0.08, 0.11</Color3>
+        <token name="Material">816</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX446688a1d2ee49d8a54e">
+      <Properties>
+        <string name="Name">West Road</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-95, 0.05, 0}}</CoordinateFrame>
+        <Vector3 name="Size">80, 0.2, 14</Vector3>
+        <Color3 name="Color">0.08, 0.08, 0.11</Color3>
+        <token name="Material">816</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX17bbe6e6769a4151b771">
+      <Properties>
+        <string name="Name">Graveside High School Structure</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-58, 7, -48}}</CoordinateFrame>
+        <Vector3 name="Size">34, 14, 26</Vector3>
+        <Color3 name="Color">0.34, 0.32, 0.38</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXe57455a409ed406ba083">
+      <Properties>
+        <string name="Name">Graveside High School Roof</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-58, 15.0, -48}}</CoordinateFrame>
+        <Vector3 name="Size">37, 2, 29</Vector3>
+        <Color3 name="Color">0.1, 0.08, 0.12</Color3>
+        <token name="Material">1088</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX574d092131294756bb66">
+      <Properties>
+        <string name="Name">Graveside High School Entrance</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-58, 6, -34.85}}</CoordinateFrame>
+        <Vector3 name="Size">4, 6, 0.4</Vector3>
+        <Color3 name="Color">0.12, 0.07, 0.05</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXf9f91d6ca80f44748d4d">
+      <Properties>
+        <string name="Name">Graveside High School Window</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-67.52, 8, -34.75}}</CoordinateFrame>
+        <Vector3 name="Size">3, 3, 0.3</Vector3>
+        <Color3 name="Color">0.35, 0.65, 0.85</Color3>
+        <token name="Material">512</token>
+        <float name="Transparency">0.25</float>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX999768f5a40042c8829a">
+      <Properties>
+        <string name="Name">Graveside High School Window</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-48.48, 8, -34.75}}</CoordinateFrame>
+        <Vector3 name="Size">3, 3, 0.3</Vector3>
+        <Color3 name="Color">0.35, 0.65, 0.85</Color3>
+        <token name="Material">512</token>
+        <float name="Transparency">0.25</float>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX90890e76f2254a169080">
+      <Properties>
+        <string name="Name">Mystic Falls Clinic Structure</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {57, 6, -45}}</CoordinateFrame>
+        <Vector3 name="Size">25, 12, 22</Vector3>
+        <Color3 name="Color">0.76, 0.77, 0.72</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXc5c324b5bc614877ad97">
+      <Properties>
+        <string name="Name">Mystic Falls Clinic Roof</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {57, 13.0, -45}}</CoordinateFrame>
+        <Vector3 name="Size">28, 2, 25</Vector3>
+        <Color3 name="Color">0.1, 0.08, 0.12</Color3>
+        <token name="Material">1088</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX762d5094700c428f905f">
+      <Properties>
+        <string name="Name">Mystic Falls Clinic Entrance</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {57, 5, -33.85}}</CoordinateFrame>
+        <Vector3 name="Size">4, 6, 0.4</Vector3>
+        <Color3 name="Color">0.12, 0.07, 0.05</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX1b99a0cd55f74f9e96e1">
+      <Properties>
+        <string name="Name">Mystic Falls Clinic Window</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {50.0, 7, -33.75}}</CoordinateFrame>
+        <Vector3 name="Size">3, 3, 0.3</Vector3>
+        <Color3 name="Color">0.35, 0.65, 0.85</Color3>
+        <token name="Material">512</token>
+        <float name="Transparency">0.25</float>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXb296f9ceb3244e4ea547">
+      <Properties>
+        <string name="Name">Mystic Falls Clinic Window</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {64.0, 7, -33.75}}</CoordinateFrame>
+        <Vector3 name="Size">3, 3, 0.3</Vector3>
+        <Color3 name="Color">0.35, 0.65, 0.85</Color3>
+        <token name="Material">512</token>
+        <float name="Transparency">0.25</float>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXb56c2c3c49d647ea82fe">
+      <Properties>
+        <string name="Name">Founder's Hall Structure</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-58, 6, 45}}</CoordinateFrame>
+        <Vector3 name="Size">28, 12, 24</Vector3>
+        <Color3 name="Color">0.43, 0.28, 0.2</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXd55201bfe76f49b8920b">
+      <Properties>
+        <string name="Name">Founder's Hall Roof</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-58, 13.0, 45}}</CoordinateFrame>
+        <Vector3 name="Size">31, 2, 27</Vector3>
+        <Color3 name="Color">0.1, 0.08, 0.12</Color3>
+        <token name="Material">1088</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXde19d4333d00457da8de">
+      <Properties>
+        <string name="Name">Founder's Hall Entrance</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-58, 5, 57.15}}</CoordinateFrame>
+        <Vector3 name="Size">4, 6, 0.4</Vector3>
+        <Color3 name="Color">0.12, 0.07, 0.05</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX1d3898799779405cbf66">
+      <Properties>
+        <string name="Name">Founder's Hall Window</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-65.84, 7, 57.25}}</CoordinateFrame>
+        <Vector3 name="Size">3, 3, 0.3</Vector3>
+        <Color3 name="Color">0.35, 0.65, 0.85</Color3>
+        <token name="Material">512</token>
+        <float name="Transparency">0.25</float>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX2ef3f60e1ae74386bcab">
+      <Properties>
+        <string name="Name">Founder's Hall Window</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-50.16, 7, 57.25}}</CoordinateFrame>
+        <Vector3 name="Size">3, 3, 0.3</Vector3>
+        <Color3 name="Color">0.35, 0.65, 0.85</Color3>
+        <token name="Material">512</token>
+        <float name="Transparency">0.25</float>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXbf28fbe649ee40268f60">
+      <Properties>
+        <string name="Name">Moonlight Cafe Structure</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {57, 5, 43}}</CoordinateFrame>
+        <Vector3 name="Size">24, 10, 20</Vector3>
+        <Color3 name="Color">0.3, 0.19, 0.16</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXf4f793ed78bc42299c20">
+      <Properties>
+        <string name="Name">Moonlight Cafe Roof</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {57, 11.0, 43}}</CoordinateFrame>
+        <Vector3 name="Size">27, 2, 23</Vector3>
+        <Color3 name="Color">0.1, 0.08, 0.12</Color3>
+        <token name="Material">1088</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX6dc67cd04c4b4bd8b00c">
+      <Properties>
+        <string name="Name">Moonlight Cafe Entrance</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {57, 4, 53.15}}</CoordinateFrame>
+        <Vector3 name="Size">4, 6, 0.4</Vector3>
+        <Color3 name="Color">0.12, 0.07, 0.05</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXea8f947eb6094d2fb05f">
+      <Properties>
+        <string name="Name">Moonlight Cafe Window</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {50.28, 6, 53.25}}</CoordinateFrame>
+        <Vector3 name="Size">3, 3, 0.3</Vector3>
+        <Color3 name="Color">0.35, 0.65, 0.85</Color3>
+        <token name="Material">512</token>
+        <float name="Transparency">0.25</float>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX8143455302d64f21865d">
+      <Properties>
+        <string name="Name">Moonlight Cafe Window</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {63.72, 6, 53.25}}</CoordinateFrame>
+        <Vector3 name="Size">3, 3, 0.3</Vector3>
+        <Color3 name="Color">0.35, 0.65, 0.85</Color3>
+        <token name="Material">512</token>
+        <float name="Transparency">0.25</float>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXe0fe328cf1e54d48992a">
+      <Properties>
+        <string name="Name">Salvatore Manor Structure</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {0, 8, -125}}</CoordinateFrame>
+        <Vector3 name="Size">48, 16, 38</Vector3>
+        <Color3 name="Color">0.22, 0.19, 0.24</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXca250772873e4ccfbef7">
+      <Properties>
+        <string name="Name">Salvatore Manor Roof</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {0, 17.0, -125}}</CoordinateFrame>
+        <Vector3 name="Size">51, 2, 41</Vector3>
+        <Color3 name="Color">0.1, 0.08, 0.12</Color3>
+        <token name="Material">1088</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX9ab1f3aa6c944621a473">
+      <Properties>
+        <string name="Name">Salvatore Manor Entrance</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {0, 7, -105.85}}</CoordinateFrame>
+        <Vector3 name="Size">4, 6, 0.4</Vector3>
+        <Color3 name="Color">0.12, 0.07, 0.05</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX593f357cd8404b7fb978">
+      <Properties>
+        <string name="Name">Salvatore Manor Window</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-13.440000000000001, 9, -105.75}}</CoordinateFrame>
+        <Vector3 name="Size">3, 3, 0.3</Vector3>
+        <Color3 name="Color">0.35, 0.65, 0.85</Color3>
+        <token name="Material">512</token>
+        <float name="Transparency">0.25</float>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX970d83133620450a89d3">
+      <Properties>
+        <string name="Name">Salvatore Manor Window</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {13.440000000000001, 9, -105.75}}</CoordinateFrame>
+        <Vector3 name="Size">3, 3, 0.3</Vector3>
+        <Color3 name="Color">0.35, 0.65, 0.85</Color3>
+        <token name="Material">512</token>
+        <float name="Transparency">0.25</float>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXcd772dc596fd4ebc8293">
+      <Properties>
+        <string name="Name">Witchcraft Library Structure</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-115, 6, -5}}</CoordinateFrame>
+        <Vector3 name="Size">24, 12, 28</Vector3>
+        <Color3 name="Color">0.28, 0.23, 0.35</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXf55f58f14aa94e999af0">
+      <Properties>
+        <string name="Name">Witchcraft Library Roof</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-115, 13.0, -5}}</CoordinateFrame>
+        <Vector3 name="Size">27, 2, 31</Vector3>
+        <Color3 name="Color">0.1, 0.08, 0.12</Color3>
+        <token name="Material">1088</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX88dc9492be0a4be8a55a">
+      <Properties>
+        <string name="Name">Witchcraft Library Entrance</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-115, 5, 9.15}}</CoordinateFrame>
+        <Vector3 name="Size">4, 6, 0.4</Vector3>
+        <Color3 name="Color">0.12, 0.07, 0.05</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX40cb22be0956497493df">
+      <Properties>
+        <string name="Name">Witchcraft Library Window</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-121.72, 7, 9.25}}</CoordinateFrame>
+        <Vector3 name="Size">3, 3, 0.3</Vector3>
+        <Color3 name="Color">0.35, 0.65, 0.85</Color3>
+        <token name="Material">512</token>
+        <float name="Transparency">0.25</float>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXdad50a575f7a4c07addc">
+      <Properties>
+        <string name="Name">Witchcraft Library Window</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-108.28, 7, 9.25}}</CoordinateFrame>
+        <Vector3 name="Size">3, 3, 0.3</Vector3>
+        <Color3 name="Color">0.35, 0.65, 0.85</Color3>
+        <token name="Material">512</token>
+        <float name="Transparency">0.25</float>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX12643a69b3f5484988e6">
+      <Properties>
+        <string name="Name">Abandoned Church Structure</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {118, 6, 8}}</CoordinateFrame>
+        <Vector3 name="Size">26, 12, 30</Vector3>
+        <Color3 name="Color">0.25, 0.24, 0.27</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX8c5631330afe448c9c8f">
+      <Properties>
+        <string name="Name">Abandoned Church Roof</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {118, 13.0, 8}}</CoordinateFrame>
+        <Vector3 name="Size">29, 2, 33</Vector3>
+        <Color3 name="Color">0.1, 0.08, 0.12</Color3>
+        <token name="Material">1088</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX9ce3585406cc445e8a32">
+      <Properties>
+        <string name="Name">Abandoned Church Entrance</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {118, 5, 23.15}}</CoordinateFrame>
+        <Vector3 name="Size">4, 6, 0.4</Vector3>
+        <Color3 name="Color">0.12, 0.07, 0.05</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXccadd913cf4c4b3e889e">
+      <Properties>
+        <string name="Name">Abandoned Church Window</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {110.72, 7, 23.25}}</CoordinateFrame>
+        <Vector3 name="Size">3, 3, 0.3</Vector3>
+        <Color3 name="Color">0.35, 0.65, 0.85</Color3>
+        <token name="Material">512</token>
+        <float name="Transparency">0.25</float>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX9bc5e0fa82d4446d8e70">
+      <Properties>
+        <string name="Name">Abandoned Church Window</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {125.28, 7, 23.25}}</CoordinateFrame>
+        <Vector3 name="Size">3, 3, 0.3</Vector3>
+        <Color3 name="Color">0.35, 0.65, 0.85</Color3>
+        <token name="Material">512</token>
+        <float name="Transparency">0.25</float>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXfbc261a444714c1994c9">
+      <Properties>
+        <string name="Name">Forest Tree 1 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-98, 4, 159}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXf671d023ed674aea9452">
+      <Properties>
+        <string name="Name">Forest Tree 1 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-98, 11, 159}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX25bd378c08a54164a951">
+      <Properties>
+        <string name="Name">Forest Tree 2 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {126, 4, -106}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX636146ca62f247e39293">
+      <Properties>
+        <string name="Name">Forest Tree 2 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {126, 11, -106}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXd491b2f14f8141c49809">
+      <Properties>
+        <string name="Name">Forest Tree 3 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-189, 4, -168}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX752b318c137642e8ba33">
+      <Properties>
+        <string name="Name">Forest Tree 3 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-189, 11, -168}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX6b6ed500268541349119">
+      <Properties>
+        <string name="Name">Forest Tree 4 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-170, 4, -4}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX3fea9af84cac4e608e9e">
+      <Properties>
+        <string name="Name">Forest Tree 4 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-170, 11, -4}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX8d62d05bcfe6435a87e8">
+      <Properties>
+        <string name="Name">Forest Tree 5 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-98, 4, -173}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX8d750d41da03460e8966">
+      <Properties>
+        <string name="Name">Forest Tree 5 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-98, 11, -173}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXfb332a30afbf49b9bd85">
+      <Properties>
+        <string name="Name">Forest Tree 6 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-124, 4, 38}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX9dd7111540a44d709f78">
+      <Properties>
+        <string name="Name">Forest Tree 6 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-124, 11, 38}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX00d098bc384349508463">
+      <Properties>
+        <string name="Name">Forest Tree 7 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-166, 4, -119}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXe522934e006a4bcdbfdf">
+      <Properties>
+        <string name="Name">Forest Tree 7 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-166, 11, -119}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXb95e079985814d29ac1e">
+      <Properties>
+        <string name="Name">Forest Tree 8 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {123, 4, 9}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX6f11e370ff0a48eaa622">
+      <Properties>
+        <string name="Name">Forest Tree 8 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {123, 11, 9}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXfb8d11a105d846569d60">
+      <Properties>
+        <string name="Name">Forest Tree 9 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {198, 4, -217}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXcffda637d7d14a9595c0">
+      <Properties>
+        <string name="Name">Forest Tree 9 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {198, 11, -217}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXb0aa32acda474646bc7c">
+      <Properties>
+        <string name="Name">Forest Tree 10 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-184, 4, -4}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX96472d9370af4c51a57a">
+      <Properties>
+        <string name="Name">Forest Tree 10 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-184, 11, -4}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX15e0cfa91fca47468340">
+      <Properties>
+        <string name="Name">Forest Tree 11 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {130, 4, -141}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX5764d0a2d3b84369b487">
+      <Properties>
+        <string name="Name">Forest Tree 11 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {130, 11, -141}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX7e23e5c371c04980bef6">
+      <Properties>
+        <string name="Name">Forest Tree 12 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-217, 4, 170}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX5c16c714a7e64b4a8a91">
+      <Properties>
+        <string name="Name">Forest Tree 12 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-217, 11, 170}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXc17a23f3aefb4217ae77">
+      <Properties>
+        <string name="Name">Forest Tree 13 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {108, 4, -173}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX3f9fde712f2742748445">
+      <Properties>
+        <string name="Name">Forest Tree 13 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {108, 11, -173}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXf0a2f12204cf4ca6b1ba">
+      <Properties>
+        <string name="Name">Forest Tree 14 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {107, 4, -37}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXe656b70af4ad4987a499">
+      <Properties>
+        <string name="Name">Forest Tree 14 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {107, 11, -37}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX39f205458ba34ae8bfa7">
+      <Properties>
+        <string name="Name">Forest Tree 15 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {172, 4, -85}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX99109725c2e74e65bdae">
+      <Properties>
+        <string name="Name">Forest Tree 15 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {172, 11, -85}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXeab8d98ca4464b32bb17">
+      <Properties>
+        <string name="Name">Forest Tree 16 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-188, 4, 15}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX89a5d1f9ae4d417d927d">
+      <Properties>
+        <string name="Name">Forest Tree 16 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-188, 11, 15}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXf01ccc1a32664c02aab9">
+      <Properties>
+        <string name="Name">Forest Tree 17 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-219, 4, -27}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX1766a4ccb73c450cb1e5">
+      <Properties>
+        <string name="Name">Forest Tree 17 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-219, 11, -27}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX7b5f0cb90e6e4bce8cf9">
+      <Properties>
+        <string name="Name">Forest Tree 18 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-165, 4, -70}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXda5aa8b610e14a4da35b">
+      <Properties>
+        <string name="Name">Forest Tree 18 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-165, 11, -70}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX8e1f3b45986540ab87bd">
+      <Properties>
+        <string name="Name">Forest Tree 19 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {168, 4, -122}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX531e3ee9147a4a039dcd">
+      <Properties>
+        <string name="Name">Forest Tree 19 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {168, 11, -122}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX7a29726c07734d41aec2">
+      <Properties>
+        <string name="Name">Forest Tree 20 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-100, 4, 118}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXef3443bfea224fa2b161">
+      <Properties>
+        <string name="Name">Forest Tree 20 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-100, 11, 118}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX617cb7b88a15462bb43a">
+      <Properties>
+        <string name="Name">Forest Tree 21 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-193, 4, -72}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXc7f911e1729a4321ad98">
+      <Properties>
+        <string name="Name">Forest Tree 21 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-193, 11, -72}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXb56d7e07efb344d79e37">
+      <Properties>
+        <string name="Name">Forest Tree 22 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-204, 4, -101}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX03dd537b4c8c4e79b6bd">
+      <Properties>
+        <string name="Name">Forest Tree 22 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-204, 11, -101}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXae317d77698d44938888">
+      <Properties>
+        <string name="Name">Forest Tree 23 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-143, 4, -78}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX7caf7c83090f4dcda814">
+      <Properties>
+        <string name="Name">Forest Tree 23 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-143, 11, -78}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX320b853177424e29bae9">
+      <Properties>
+        <string name="Name">Forest Tree 24 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {176, 4, 207}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX5029b7ca1a46434ab094">
+      <Properties>
+        <string name="Name">Forest Tree 24 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {176, 11, 207}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX2bcf18d3e6f64bf48c00">
+      <Properties>
+        <string name="Name">Forest Tree 25 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {115, 4, -31}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXdbf25133d89446458efb">
+      <Properties>
+        <string name="Name">Forest Tree 25 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {115, 11, -31}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX0db923a208a5424ebea6">
+      <Properties>
+        <string name="Name">Forest Tree 26 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {121, 4, 123}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX800190b9a8e4490eab1c">
+      <Properties>
+        <string name="Name">Forest Tree 26 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {121, 11, 123}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX1656f6befac54d4b9e9c">
+      <Properties>
+        <string name="Name">Forest Tree 27 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {184, 4, 129}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX47e67f23af4742e694fd">
+      <Properties>
+        <string name="Name">Forest Tree 27 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {184, 11, 129}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX191eca4db4344e75886e">
+      <Properties>
+        <string name="Name">Forest Tree 28 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-172, 4, 105}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXd58d89d6c63647b89771">
+      <Properties>
+        <string name="Name">Forest Tree 28 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-172, 11, 105}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX93742facf7ab431a8a26">
+      <Properties>
+        <string name="Name">Forest Tree 29 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-163, 4, 153}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX8c5c2ced64c64ad8b9bc">
+      <Properties>
+        <string name="Name">Forest Tree 29 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-163, 11, 153}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX7344f5b074754c85841c">
+      <Properties>
+        <string name="Name">Forest Tree 30 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-115, 4, 16}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX441ca359e5474f69b6eb">
+      <Properties>
+        <string name="Name">Forest Tree 30 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-115, 11, 16}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX16ac3a20fba04f75990a">
+      <Properties>
+        <string name="Name">Forest Tree 31 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {129, 4, 107}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXa24a62edfffb416a8d64">
+      <Properties>
+        <string name="Name">Forest Tree 31 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {129, 11, 107}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXa069614dff4040aaa529">
+      <Properties>
+        <string name="Name">Forest Tree 32 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-182, 4, -54}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXf6dfe01e96994bc08b43">
+      <Properties>
+        <string name="Name">Forest Tree 32 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-182, 11, -54}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXb1d2bb1faf6a464c9786">
+      <Properties>
+        <string name="Name">Forest Tree 33 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-124, 4, 200}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX4bf3d360b9054c038ad5">
+      <Properties>
+        <string name="Name">Forest Tree 33 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-124, 11, 200}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXd737d691c8714d6180e0">
+      <Properties>
+        <string name="Name">Forest Tree 34 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-198, 4, -59}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXe016765d055c4bf29fc6">
+      <Properties>
+        <string name="Name">Forest Tree 34 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-198, 11, -59}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXd43bf98616ba4fc4b99f">
+      <Properties>
+        <string name="Name">Forest Tree 35 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {129, 4, -187}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX79de18639a434395a14d">
+      <Properties>
+        <string name="Name">Forest Tree 35 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {129, 11, -187}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXc3c603910b2f42449c9b">
+      <Properties>
+        <string name="Name">Forest Tree 36 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-211, 4, 70}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX8bd8e6d7189d46b09cd9">
+      <Properties>
+        <string name="Name">Forest Tree 36 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-211, 11, 70}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX42889101dabe45b695fb">
+      <Properties>
+        <string name="Name">Forest Tree 37 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {122, 4, 115}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX8d592bb41b204bc988f0">
+      <Properties>
+        <string name="Name">Forest Tree 37 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {122, 11, 115}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX1329474864334086bbe9">
+      <Properties>
+        <string name="Name">Forest Tree 38 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {145, 4, 109}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXaee08c7284c641e89b93">
+      <Properties>
+        <string name="Name">Forest Tree 38 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {145, 11, 109}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXade18803b9fb4d01a6ba">
+      <Properties>
+        <string name="Name">Forest Tree 39 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {113, 4, -85}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXcb72d16acc8b48f7bf68">
+      <Properties>
+        <string name="Name">Forest Tree 39 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {113, 11, -85}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX19296d00713348d9b0a9">
+      <Properties>
+        <string name="Name">Forest Tree 40 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-126, 4, 161}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX3c5468d1255c4a11955f">
+      <Properties>
+        <string name="Name">Forest Tree 40 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-126, 11, 161}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX1600efba65f146859d54">
+      <Properties>
+        <string name="Name">Forest Tree 41 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {190, 4, 79}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX42dcc797030b4bd9a71b">
+      <Properties>
+        <string name="Name">Forest Tree 41 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {190, 11, 79}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX8a70d09af4094117b7ce">
+      <Properties>
+        <string name="Name">Forest Tree 42 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {209, 4, 78}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXcae895b4539e496eae70">
+      <Properties>
+        <string name="Name">Forest Tree 42 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {209, 11, 78}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX3e42ed09afff458fba45">
+      <Properties>
+        <string name="Name">Forest Tree 43 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {141, 4, -108}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXa8ec85a81f824321bf3a">
+      <Properties>
+        <string name="Name">Forest Tree 43 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {141, 11, -108}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX5dcda77d18364be0982f">
+      <Properties>
+        <string name="Name">Forest Tree 44 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-160, 4, 32}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXfec6885951644149ba13">
+      <Properties>
+        <string name="Name">Forest Tree 44 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-160, 11, 32}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX4511415e1bc64da6b334">
+      <Properties>
+        <string name="Name">Forest Tree 45 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-191, 4, -196}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX1ea86f16a4b544c29498">
+      <Properties>
+        <string name="Name">Forest Tree 45 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-191, 11, -196}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX491b324fd17a4b849a8b">
+      <Properties>
+        <string name="Name">Forest Tree 46 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-114, 4, 101}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX10b7a5290f6b4e1e8557">
+      <Properties>
+        <string name="Name">Forest Tree 46 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-114, 11, 101}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX724e268b14174968addf">
+      <Properties>
+        <string name="Name">Forest Tree 47 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-196, 4, 128}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX46fdf3e822404357b07f">
+      <Properties>
+        <string name="Name">Forest Tree 47 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {-196, 11, 128}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXf7bddc7b63d04d74b4d5">
+      <Properties>
+        <string name="Name">Forest Tree 48 Trunk</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {171, 4, -188}}</CoordinateFrame>
+        <Vector3 name="Size">2, 9, 2</Vector3>
+        <Color3 name="Color">0.2, 0.11, 0.07</Color3>
+        <token name="Material">272</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBXabfce53a83a8475693d6">
+      <Properties>
+        <string name="Name">Forest Tree 48 Crown</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {171, 11, -188}}</CoordinateFrame>
+        <Vector3 name="Size">10, 12, 10</Vector3>
+        <Color3 name="Color">0.06, 0.22, 0.12</Color3>
+        <token name="Material">512</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX19259a3a56a642ba96f1">
+      <Properties>
+        <string name="Name">Fountain Base</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {0, 1, 0}}</CoordinateFrame>
+        <Vector3 name="Size">10, 2, 10</Vector3>
+        <Color3 name="Color">0.42, 0.45, 0.5</Color3>
+        <token name="Material">816</token>
+      </Properties>
+    </Item>
+    <Item class="Part" referent="RBX0a320cbc6d0d4948919a">
+      <Properties>
+        <string name="Name">Fountain Water</string>
+        <bool name="Anchored">true</bool>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {0, 2.2, 0}}</CoordinateFrame>
+        <Vector3 name="Size">6, 0.4, 6</Vector3>
+        <Color3 name="Color">0.1, 0.48, 0.75</Color3>
+        <token name="Material">512</token>
+        <float name="Transparency">0.2</float>
+      </Properties>
+    </Item>
+    <Item class="SpawnLocation" referent="RBX9370d988754d46d583ee">
+      <Properties>
+        <string name="Name">Arrival Spawn</string>
+        <CoordinateFrame name="CFrame">{{1, 0, 0}, {0, 1, 0}, {0, 0, 1}, {0, 3, 20}}</CoordinateFrame>
+        <Vector3 name="Size">8, 1, 8</Vector3>
+        <Color3 name="Color">0.35, 0.08, 0.12</Color3>
+        <bool name="Anchored">true</bool>
+        <bool name="Neutral">true</bool>
+        <bool name="AllowTeamChangeOnTouch">false</bool>
+      </Properties>
+    </Item>
+  </Item>
+  <Item class="Lighting" referent="RBX9850fc31584f4e449fdb">
+    <Properties>
+      <string name="Name">Lighting</string>
+      <float name="Brightness">2</float>
+      <Color3 name="Ambient">0.18, 0.16, 0.25</Color3>
+      <Color3 name="OutdoorAmbient">0.28, 0.25, 0.34</Color3>
+      <bool name="GlobalShadows">true</bool>
+      <float name="ClockTime">20.5</float>
+    </Properties>
+  </Item>
+  <Item class="Players" referent="RBXe64e2b8375cc4ca4805f">
+    <Properties>
+      <string name="Name">Players</string>
+    </Properties>
+  </Item>
+  <Item class="ReplicatedStorage" referent="RBXe2a2c056c1784dca96c6">
+    <Properties>
+      <string name="Name">ReplicatedStorage</string>
+    </Properties>
+    <Item class="RemoteEvent" referent="RBXce8b3e13f6004ebd8656">
+      <Properties>
+        <string name="Name">ChooseSpecies</string>
+      </Properties>
+    </Item>
+    <Item class="RemoteEvent" referent="RBX27bf59a110b74ff3be42">
+      <Properties>
+        <string name="Name">UseAbility</string>
+      </Properties>
+    </Item>
+  </Item>
+  <Item class="ServerScriptService" referent="RBXd6caab28550f4813aba5">
+    <Properties>
+      <string name="Name">ServerScriptService</string>
+    </Properties>
+    <Item class="Script" referent="RBX715d5825118a4076b544">
+      <Properties>
+        <string name="Name">LegaciesGameServer</string>
+        <ProtectedString name="Source">
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local choose = ReplicatedStorage:WaitForChild("ChooseSpecies")
+local ability = ReplicatedStorage:WaitForChild("UseAbility")
+local valid = {Vampire=true, Witch=true, Werewolf=true, Human=true}
+local cooldowns = {}
+Players.PlayerAdded:Connect(function(player)
+    player:SetAttribute("Species", "Human")
+    player:SetAttribute("Blood", 100)
+    player:SetAttribute("Magic", 100)
+    player:SetAttribute("Level", 1)
+end)
+choose.OnServerEvent:Connect(function(player, species)
+    if typeof(species) == "string" and valid[species] then
+        player:SetAttribute("Species", species)
+    end
+end)
+ability.OnServerEvent:Connect(function(player, move)
+    if typeof(move) ~= "string" then return end
+    local now = os.clock()
+    if cooldowns[player] and now - cooldowns[player] &lt; 4 then return end
+    local species = player:GetAttribute("Species")
+    local char = player.Character
+    local hum = char and char:FindFirstChildOfClass("Humanoid")
+    local hrp = char and char:FindFirstChild("HumanoidRootPart")
+    if not hum or not hrp then return end
+    if move == "Sprint" and species == "Vampire" then
+        cooldowns[player] = now
+        local old = hum.WalkSpeed
+        hum.WalkSpeed = 30
+        task.delay(5, function() if hum and hum.Parent then hum.WalkSpeed = old end end)
+    elseif move == "Heal" and species == "Witch" then
+        cooldowns[player] = now
+        hum.Health = math.min(hum.MaxHealth, hum.Health + 35)
+        player:SetAttribute("Magic", math.max(0, (player:GetAttribute("Magic") or 100)-20))
+    elseif move == "Howl" and species == "Werewolf" then
+        cooldowns[player] = now
+        local fx = Instance.new("Explosion")
+        fx.Position = hrp.Position + hrp.CFrame.LookVector * 8
+        fx.BlastRadius = 8
+        fx.BlastPressure = 0
+        fx.DestroyJointRadiusPercent = 0
+        fx.Parent = workspace
+        task.delay(1, function() fx:Destroy() end)
+    end
+end)
+Players.PlayerRemoving:Connect(function(p) cooldowns[p] = nil end)
+</ProtectedString>
+      </Properties>
+    </Item>
+  </Item>
+  <Item class="StarterGui" referent="RBXe3823ff73243439487b4">
+    <Properties>
+      <string name="Name">StarterGui</string>
+    </Properties>
+    <Item class="ScreenGui" referent="RBXcbc6b204ff4a4269b35a">
+      <Properties>
+        <string name="Name">LegaciesHUD</string>
+        <bool name="ResetOnSpawn">false</bool>
+        <bool name="IgnoreGuiInset">true</bool>
+      </Properties>
+      <Item class="LocalScript" referent="RBXd8a437d57c53458a90e4">
+        <Properties>
+          <string name="Name">LegaciesHUDClient</string>
+          <ProtectedString name="Source">
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local player = Players.LocalPlayer
+local choose = ReplicatedStorage:WaitForChild("ChooseSpecies")
+local ability = ReplicatedStorage:WaitForChild("UseAbility")
+local gui = script.Parent
+local frame = Instance.new("Frame")
+frame.Name = "Panel"; frame.Size = UDim2.new(0, 300, 0, 245); frame.Position = UDim2.new(0, 18, 0.5, -122)
+frame.BackgroundColor3 = Color3.fromRGB(17, 14, 25); frame.BackgroundTransparency = 0.08; frame.Parent = gui
+local corner = Instance.new("UICorner"); corner.CornerRadius = UDim.new(0, 12); corner.Parent = frame
+local stroke = Instance.new("UIStroke"); stroke.Color = Color3.fromRGB(150, 45, 75); stroke.Thickness = 2; stroke.Parent = frame
+local function label(text, y, height, size)
+    local l = Instance.new("TextLabel"); l.Size = UDim2.new(1, -20, 0, height); l.Position = UDim2.new(0, 10, 0, y)
+    l.BackgroundTransparency = 1; l.Text = text; l.TextColor3 = Color3.fromRGB(245, 235, 245)
+    l.Font = Enum.Font.GothamBold; l.TextSize = size; l.TextWrapped = true; l.Parent = frame; return l
+end
+label("MIDNIGHT LEGACIES", 10, 30, 20)
+label("Choose your bloodline", 42, 22, 13)
+local status = label("Species: Human | Level: 1", 72, 22, 12)
+local function button(text, x, y, w, callback)
+    local b = Instance.new("TextButton"); b.Size = UDim2.new(0, w, 0, 32); b.Position = UDim2.new(0, x, 0, y)
+    b.Text = text; b.TextColor3 = Color3.new(1,1,1); b.Font = Enum.Font.GothamBold; b.TextSize = 12
+    b.BackgroundColor3 = Color3.fromRGB(89, 29, 53); b.Parent = frame
+    local c = Instance.new("UICorner"); c.CornerRadius = UDim.new(0, 7); c.Parent = b
+    b.Activated:Connect(callback); return b
+end
+button("VAMPIRE", 10, 103, 88, function() choose:FireServer("Vampire") end)
+button("WITCH", 106, 103, 88, function() choose:FireServer("Witch") end)
+button("WEREWOLF", 202, 103, 88, function() choose:FireServer("Werewolf") end)
+button("HUMAN", 10, 143, 88, function() choose:FireServer("Human") end)
+button("ABILITY", 106, 143, 88, function()
+    local s = player:GetAttribute("Species")
+    if s == "Vampire" then ability:FireServer("Sprint")
+    elseif s == "Witch" then ability:FireServer("Heal")
+    elseif s == "Werewolf" then ability:FireServer("Howl") end
+end)
+button("RESET VIEW", 202, 143, 88, function()
+    local c = player.Character; local h = c and c:FindFirstChildOfClass("Humanoid")
+    if h then workspace.CurrentCamera.CameraSubject = h end
+end)
+label("Vampire: speed | Witch: heal | Werewolf: howl", 183, 45, 11)
+local function refresh()
+    status.Text = "Species: "..tostring(player:GetAttribute("Species") or "Human").." | Level: "..tostring(player:GetAttribute("Level") or 1)
+end
+for _, attr in ipairs({"Species","Level"}) do player:GetAttributeChangedSignal(attr):Connect(refresh) end
+refresh()
+</ProtectedString>
+        </Properties>
+      </Item>
+    </Item>
+  </Item>
+  <Item class="Folder" referent="RBX27bfde601f7e4f669d94">
+    <Properties>
+      <string name="Name">GAME NOTES - Original supernatural RPG</string>
+    </Properties>
+  </Item>
+</roblox>
