@@ -1,1 +1,44 @@
 
+name: Publish Roblox Place
+
+on:
+  workflow_dispatch:
+    inputs:
+      version_type:
+        description: "Choose Saved first, then Published"
+        required: true
+        type: choice
+        options:
+          - Saved
+          - Published
+        default: Saved
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get game file
+        uses: actions/checkout@v4
+
+      - name: Publish place
+        env:
+          API_KEY: ${{ secrets.ROBLOX_API_KEY }}
+          UNIVERSE_ID: ${{ vars.ROBLOX_UNIVERSE_ID }}
+          PLACE_ID: ${{ vars.ROBLOX_PLACE_ID }}
+          VERSION_TYPE: ${{ inputs.version_type }}
+        run: |
+          set -eu
+          FILE="Midnight_Legacies_Roblox_Place.rbxlx"
+          test -f "$FILE" || {
+            echo "File not found. Check the filename in your repository."
+            exit 1
+          }
+          curl --fail-with-body --silent --show-error \
+            --request POST \
+            "https://apis.roblox.com/universes/v1/${UNIVERSE_ID}/places/${PLACE_ID}/versions?versionType=${VERSION_TYPE}" \
+            --header "x-api-key: ${API_KEY}" \
+            --header "Content-Type: application/octet-stream" \
+            --data-binary "@${FILE}"
