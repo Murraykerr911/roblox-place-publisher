@@ -42,5 +42,5 @@ jobs:
             --request POST \
             "https://apis.roblox.com/universes/v1/${UNIVERSE_ID}/places/${PLACE_ID}/versions?versionType=${VERSION_TYPE}" \
             --header "x-api-key: ${API_KEY}" \
-            --header "Content-Type: application/octet-stream" \
+            --header "Content-Type: application/xml" \
             --data-binary "@${FILE}"
