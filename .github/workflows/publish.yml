@@ -30,7 +30,7 @@ jobs:
           API_KEY: ${{ secrets.ROBLOX_API_KEY }}
           UNIVERSE_ID: ${{ vars.ROBLOX_UNIVERSE_ID }}
           PLACE_ID: ${{ vars.ROBLOX_PLACE_ID }}
-          VERSION_TYPE: ${{ inputs.version_type }}
+          VERSION_TYPE: ${{ github.event.inputs.version_type || 'Saved' }}
         run: |
           set -eu
           FILE="Midnight_Legacies_Roblox_Place.rbxlx"
