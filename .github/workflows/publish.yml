@@ -11,6 +11,9 @@ on:
           - Saved
           - Published
         default: Saved
+  push:
+    paths:
+      - '.github/workflows/publish.yml'
 
 permissions:
   contents: read
