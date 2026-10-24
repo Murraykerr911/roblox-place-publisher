@@ -33,11 +33,11 @@ jobs:
           VERSION_TYPE: ${{ github.event.inputs.version_type || 'Saved' }}
         run: |
           set -eu
-          FILE="Midnight_Legacies_Roblox_Place.rbxlx"
+          FILE="MidnightLegacies.rbxlx"
           test -f "$FILE" || {
             echo "File not found. Check the filename in your repository."
             exit 1
-          }
+          } 
           curl --fail-with-body --silent --show-error \
             --request POST \
             "https://apis.roblox.com/universes/v1/${UNIVERSE_ID}/places/${PLACE_ID}/versions?versionType=${VERSION_TYPE}" \
