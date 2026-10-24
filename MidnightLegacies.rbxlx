@@ -1,0 +1,1742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<roblox xmlns:xmime="http://www.w3.org/2005/05/xmlmime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.roblox.com/roblox.xsd" version="4">
+  <External>null</External>
+  <External>null</External>
+  <Item class="Workspace" referent="RBX1">
+    <Item class="Terrain" referent="RBXTerrain"><Properties><string name="Name">Terrain</string></Properties></Item><Properties>
+      <string name="Name">Workspace</string>
+      <float name="DistributedGameTime">0</float>
+      <bool name="FilteringEnabled">true</bool>
+    </Properties>
+  </Item>
+  <Item class="Lighting" referent="RBX2">
+    <Properties>
+      <string name="Name">Lighting</string>
+      <float name="Brightness">1.5</float>
+      <Color3 name="Ambient">
+        <R>0.15686275</R><G>0.13725491</G><B>0.21568628</B>
+      </Color3>
+      <Color3 name="OutdoorAmbient">
+        <R>0.11764706</R><G>0.11764706</G><B>0.1764706</B>
+      </Color3>
+      <float name="ClockTime">22</float>
+      <float name="FogEnd">600</float>
+      <Color3 name="FogColor">
+        <R>0.078431375</R><G>0.05882353</G><B>0.11764706</B>
+      </Color3>
+    </Properties>
+  </Item>
+  <Item class="ReplicatedStorage" referent="RBX3">
+    <Properties>
+      <string name="Name">ReplicatedStorage</string>
+    </Properties>
+    <Item class="Folder" referent="RBX4">
+      <Properties>
+        <string name="Name">Modules</string>
+      </Properties>
+      <Item class="ModuleScript" referent="RBX5">
+        <Properties>
+          <string name="Name">SpeciesConfig</string>
+          <ProtectedString name="Source"><![CDATA[--[[
+	Midnight Legacies – Species Configuration
+	All species data lives here. Add new species or evolutions by extending the tables.
+]]
+
+local SpeciesConfig = {}
+
+SpeciesConfig.Species = {
+	Human = {
+		DisplayName = "Human",
+		Description = "Resourceful and adaptable. Masters of investigation, alchemy and enchanted weaponry.",
+		ResourceName = "Focus",
+		ResourceColor = Color3.fromRGB(200, 200, 220),
+		BaseStats = {
+			Health = 100,
+			Speed = 16,
+			Strength = 10,
+			Defense = 10,
+		},
+		StartingAbilities = {"EnchantedStrike", "TacticalDodge", "ProtectiveCharm"},
+		Weaknesses = {},
+		CanEvolveTo = {"Hunter", "Alchemist"},
+	},
+
+	Vampire = {
+		DisplayName = "Vampire",
+		Description = "Immortal predators of the night. Fast, strong, and sustained by blood.",
+		ResourceName = "Blood",
+		ResourceColor = Color3.fromRGB(180, 30, 40),
+		BaseStats = {
+			Health = 120,
+			Speed = 22,
+			Strength = 18,
+			Defense = 12,
+		},
+		StartingAbilities = {"ShadowDash", "BloodStrike", "RapidRegen"},
+		Weaknesses = {"Sunlight", "EnchantedWeapons"},
+		CanEvolveTo = {"AncientVampire", "OriginalVampire"},
+	},
+
+	Witch = {
+		DisplayName = "Witch",
+		Description = "Wielders of arcane energy. Spells, rituals and bloodline power.",
+		ResourceName = "Mana",
+		ResourceColor = Color3.fromRGB(120, 80, 220),
+		BaseStats = {
+			Health = 90,
+			Speed = 16,
+			Strength = 8,
+			Defense = 8,
+		},
+		StartingAbilities = {"ArcaneBolt", "TelekineticPush", "MagicalBarrier"},
+		Weaknesses = {"MagicalExhaustion"},
+		CanEvolveTo = {"BloodlineWitch", "AncestralWitch", "Siphoner"},
+	},
+
+	Siphoner = {
+		DisplayName = "Siphoner",
+		Description = "Cannot generate magic naturally. Absorbs power from the world and other supernaturals.",
+		ResourceName = "AbsorbedMagic",
+		ResourceColor = Color3.fromRGB(0, 200, 180),
+		BaseStats = {
+			Health = 95,
+			Speed = 17,
+			Strength = 10,
+			Defense = 9,
+		},
+		StartingAbilities = {"Siphon", "AbsorbedBolt", "DrainTouch"},
+		Weaknesses = {"NoNaturalRegen"},
+		CanEvolveTo = {"Heretic"},
+	},
+
+	Werewolf = {
+		DisplayName = "Werewolf",
+		Description = "Beings of the moon and the pack. Overwhelming physical power and transformation.",
+		ResourceName = "Rage",
+		ResourceColor = Color3.fromRGB(220, 120, 40),
+		BaseStats = {
+			Health = 140,
+			Speed = 20,
+			Strength = 22,
+			Defense = 16,
+		},
+		StartingAbilities = {"Pounce", "ClawStrike", "Howl"},
+		Weaknesses = {"Silver"},
+		CanEvolveTo = {"Alpha", "Hybrid"},
+	},
+}
+
+-- Rare / evolved forms (unlocked later)
+SpeciesConfig.Evolutions = {
+	Heretic = {
+		DisplayName = "Heretic",
+		BaseSpecies = "Siphoner",
+		Description = "A siphoner who has claimed vampiric immortality while retaining the ability to absorb magic.",
+		Requirements = {
+			MinLevel = 40,
+			Quest = "TheHereticPath",
+			Items = {"EclipseFragment"},
+		},
+		StatMultipliers = {Health = 1.4, Speed = 1.3, Strength = 1.35},
+	},
+	AncientVampire = {
+		DisplayName = "Ancient Vampire",
+		BaseSpecies = "Vampire",
+		Description = "Centuries of power condensed into a single immortal form.",
+		Requirements = {
+			MinLevel = 35,
+			Quest = "VampireDynasty",
+		},
+		StatMultipliers = {Health = 1.5, Speed = 1.4, Strength = 1.5},
+	},
+	OriginalVampire = {
+		DisplayName = "Original Vampire",
+		BaseSpecies = "Vampire",
+		Description = "The apex of vampiric evolution. Extremely rare.",
+		Requirements = {
+			MinLevel = 55,
+			Quest = "OriginalRitual",
+			Items = {"EclipseRelic", "AncientBlood"},
+		},
+		StatMultipliers = {Health = 2.0, Speed = 1.6, Strength = 1.8},
+	},
+	Alpha = {
+		DisplayName = "Alpha",
+		BaseSpecies = "Werewolf",
+		Description = "Leader of the pack. Commands both wolf and human form with mastery.",
+		Requirements = {
+			MinLevel = 30,
+			FactionRank = "PackLeader",
+		},
+		StatMultipliers = {Health = 1.6, Strength = 1.7},
+	},
+	Hybrid = {
+		DisplayName = "Hybrid",
+		BaseSpecies = "Werewolf", -- or Vampire depending on path
+		Description = "A fusion of vampire and werewolf nature. Rare and unstable.",
+		Requirements = {
+			MinLevel = 45,
+			Quest = "HybridAwakening",
+		},
+		StatMultipliers = {Health = 1.7, Speed = 1.5, Strength = 1.6},
+	},
+}
+
+function SpeciesConfig.GetSpecies(name)
+	return SpeciesConfig.Species[name]
+end
+
+function SpeciesConfig.GetEvolution(name)
+	return SpeciesConfig.Evolutions[name]
+end
+
+return SpeciesConfig
+]]></ProtectedString>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="RBX6">
+        <Properties>
+          <string name="Name">AbilityConfig</string>
+          <ProtectedString name="Source"><![CDATA[--[[
+	Midnight Legacies – Ability Configuration
+	Define every ability here. CombatService reads from this table.
+]]
+
+local AbilityConfig = {}
+
+AbilityConfig.Abilities = {
+	-- Vampire
+	ShadowDash = {
+		DisplayName = "Shadow Dash",
+		Species = "Vampire",
+		Cooldown = 6,
+		ResourceCost = 15,
+		Range = 40,
+		Description = "Dash forward through shadow, dealing light damage on impact.",
+		Type = "Movement",
+	},
+	BloodStrike = {
+		DisplayName = "Blood Strike",
+		Species = "Vampire",
+		Cooldown = 4,
+		ResourceCost = 20,
+		Range = 12,
+		Description = "A powerful melee strike that returns a portion of damage as blood.",
+		Type = "Melee",
+	},
+	RapidRegen = {
+		DisplayName = "Rapid Regeneration",
+		Species = "Vampire",
+		Cooldown = 18,
+		ResourceCost = 35,
+		Range = 0,
+		Description = "Instantly restore a large amount of health. Costs significant blood.",
+		Type = "Self",
+	},
+	Compel = {
+		DisplayName = "Compel",
+		Species = "Vampire",
+		Cooldown = 25,
+		ResourceCost = 40,
+		Range = 20,
+		Description = "Temporarily influence an eligible target (consent-based RP safeguards apply).",
+		Type = "Utility",
+	},
+	Bloodlust = {
+		DisplayName = "Bloodlust",
+		Species = "Vampire",
+		Cooldown = 45,
+		ResourceCost = 50,
+		Range = 0,
+		Description = "Enter a temporary state of heightened speed and strength.",
+		Type = "Buff",
+	},
+
+	-- Witch
+	ArcaneBolt = {
+		DisplayName = "Arcane Bolt",
+		Species = "Witch",
+		Cooldown = 2.5,
+		ResourceCost = 12,
+		Range = 60,
+		Description = "Fire a bolt of pure magical energy.",
+		Type = "Ranged",
+	},
+	TelekineticPush = {
+		DisplayName = "Telekinetic Push",
+		Species = "Witch",
+		Cooldown = 7,
+		ResourceCost = 25,
+		Range = 30,
+		Description = "Forcefully push enemies away and interrupt them.",
+		Type = "CrowdControl",
+	},
+	MagicalBarrier = {
+		DisplayName = "Magical Barrier",
+		Species = "Witch",
+		Cooldown = 16,
+		ResourceCost = 30,
+		Range = 0,
+		Description = "Create a temporary shield that absorbs damage.",
+		Type = "Self",
+	},
+	BindingSpell = {
+		DisplayName = "Binding Spell",
+		Species = "Witch",
+		Cooldown = 14,
+		ResourceCost = 28,
+		Range = 25,
+		Description = "Root a target in place for a short duration.",
+		Type = "CrowdControl",
+	},
+	ElementalBurst = {
+		DisplayName = "Elemental Burst",
+		Species = "Witch",
+		Cooldown = 12,
+		ResourceCost = 40,
+		Range = 20,
+		Description = "Release a burst of elemental energy around you.",
+		Type = "AoE",
+	},
+
+	-- Siphoner
+	Siphon = {
+		DisplayName = "Siphon",
+		Species = "Siphoner",
+		Cooldown = 8,
+		ResourceCost = 0,
+		Range = 18,
+		Description = "Absorb magical energy from a target or enchanted object.",
+		Type = "Resource",
+	},
+	AbsorbedBolt = {
+		DisplayName = "Absorbed Bolt",
+		Species = "Siphoner",
+		Cooldown = 3,
+		ResourceCost = 15,
+		Range = 55,
+		Description = "Fire a bolt using previously absorbed magic.",
+		Type = "Ranged",
+	},
+	DrainTouch = {
+		DisplayName = "Drain Touch",
+		Species = "Siphoner",
+		Cooldown = 10,
+		ResourceCost = 10,
+		Range = 8,
+		Description = "Drain health and magic from a close target.",
+		Type = "Melee",
+	},
+
+	-- Werewolf
+	Pounce = {
+		DisplayName = "Pounce",
+		Species = "Werewolf",
+		Cooldown = 8,
+		ResourceCost = 20,
+		Range = 35,
+		Description = "Leap at a target, dealing heavy damage on landing.",
+		Type = "Movement",
+	},
+	ClawStrike = {
+		DisplayName = "Claw Strike",
+		Species = "Werewolf",
+		Cooldown = 3,
+		ResourceCost = 12,
+		Range = 10,
+		Description = "A rapid series of claw attacks.",
+		Type = "Melee",
+	},
+	Howl = {
+		DisplayName = "Howl",
+		Species = "Werewolf",
+		Cooldown = 20,
+		ResourceCost = 25,
+		Range = 40,
+		Description = "Inspire nearby pack members and intimidate enemies.",
+		Type = "Buff",
+	},
+	WolfTransformation = {
+		DisplayName = "Wolf Form",
+		Species = "Werewolf",
+		Cooldown = 60,
+		ResourceCost = 40,
+		Range = 0,
+		Description = "Transform into wolf form. Gains massive physical power.",
+		Type = "Transformation",
+	},
+
+	-- Human
+	EnchantedStrike = {
+		DisplayName = "Enchanted Strike",
+		Species = "Human",
+		Cooldown = 5,
+		ResourceCost = 15,
+		Range = 12,
+		Description = "A precise strike empowered by an enchanted weapon.",
+		Type = "Melee",
+	},
+	TacticalDodge = {
+		DisplayName = "Tactical Dodge",
+		Species = "Human",
+		Cooldown = 7,
+		ResourceCost = 10,
+		Range = 0,
+		Description = "Quickly roll out of harm's way and gain brief invulnerability.",
+		Type = "Movement",
+	},
+	ProtectiveCharm = {
+		DisplayName = "Protective Charm",
+		Species = "Human",
+		Cooldown = 22,
+		ResourceCost = 25,
+		Range = 0,
+		Description = "Activate a charm that reduces incoming supernatural damage.",
+		Type = "Self",
+	},
+	Trap = {
+		DisplayName = "Hunter's Trap",
+		Species = "Human",
+		Cooldown = 15,
+		ResourceCost = 20,
+		Range = 20,
+		Description = "Place a temporary trap that slows and damages enemies.",
+		Type = "Utility",
+	},
+}
+
+function AbilityConfig.Get(name)
+	return AbilityConfig.Abilities[name]
+end
+
+function AbilityConfig.GetForSpecies(speciesName)
+	local list = {}
+	for id, data in pairs(AbilityConfig.Abilities) do
+		if data.Species == speciesName then
+			table.insert(list, id)
+		end
+	end
+	return list
+end
+
+return AbilityConfig
+]]></ProtectedString>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="RBX7">
+        <Properties>
+          <string name="Name">EvolutionConfig</string>
+          <ProtectedString name="Source"><![CDATA[--[[
+	Midnight Legacies – Evolution Progression
+]]
+
+local EvolutionConfig = {}
+
+-- Visual progression paths shown in the Evolution UI
+EvolutionConfig.Paths = {
+	Vampire = {
+		{Tier = 1, Name = "Vampire", LevelReq = 1},
+		{Tier = 2, Name = "Adept Vampire", LevelReq = 15},
+		{Tier = 3, Name = "Elder Vampire", LevelReq = 30},
+		{Tier = 4, Name = "Ancient Vampire", LevelReq = 35, Evolution = "AncientVampire"},
+		{Tier = 5, Name = "Original Vampire", LevelReq = 55, Evolution = "OriginalVampire"},
+	},
+	Witch = {
+		{Tier = 1, Name = "Witch", LevelReq = 1},
+		{Tier = 2, Name = "Adept Witch", LevelReq = 12},
+		{Tier = 3, Name = "Bloodline Witch", LevelReq = 25},
+		{Tier = 4, Name = "Ancestral Witch", LevelReq = 35},
+	},
+	Siphoner = {
+		{Tier = 1, Name = "Siphoner", LevelReq = 1},
+		{Tier = 2, Name = "Adept Siphoner", LevelReq = 18},
+		{Tier = 3, Name = "Master Siphoner", LevelReq = 32},
+		{Tier = 4, Name = "Heretic", LevelReq = 40, Evolution = "Heretic"},
+	},
+	Werewolf = {
+		{Tier = 1, Name = "Newly Awakened", LevelReq = 1},
+		{Tier = 2, Name = "Pack Member", LevelReq = 10},
+		{Tier = 3, Name = "Experienced Wolf", LevelReq = 22},
+		{Tier = 4, Name = "Pack Leader", LevelReq = 30},
+		{Tier = 5, Name = "Alpha", LevelReq = 30, Evolution = "Alpha"},
+		{Tier = 6, Name = "Hybrid", LevelReq = 45, Evolution = "Hybrid"},
+	},
+	Human = {
+		{Tier = 1, Name = "Human", LevelReq = 1},
+		{Tier = 2, Name = "Investigator", LevelReq = 10},
+		{Tier = 3, Name = "Hunter", LevelReq = 20},
+		{Tier = 4, Name = "Master Hunter", LevelReq = 35},
+	},
+}
+
+function EvolutionConfig.GetPath(species)
+	return EvolutionConfig.Paths[species]
+end
+
+return EvolutionConfig
+]]></ProtectedString>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="RBX8">
+        <Properties>
+          <string name="Name">QuestConfig</string>
+          <ProtectedString name="Source"><![CDATA[--[[
+	Midnight Legacies – Quest Configuration
+	Main story + side questlines
+]]
+
+local QuestConfig = {}
+
+QuestConfig.Quests = {
+	-- Tutorial / Intro
+	WelcomeToMidnight = {
+		Id = "WelcomeToMidnight",
+		Title = "Welcome to Midnight",
+		Description = "Arrive at the academy and meet the orientation guide.",
+		Type = "Main",
+		Objectives = {
+			{Type = "Talk", Target = "OrientationGuide", Text = "Speak with the Orientation Guide"},
+			{Type = "Explore", Target = "AcademyCourtyard", Text = "Explore the Academy Courtyard"},
+		},
+		Rewards = {
+			XP = 50,
+			Moonstones = 25,
+			Title = "Newcomer",
+		},
+		Next = "SpeciesAwakening",
+	},
+
+	SpeciesAwakening = {
+		Id = "SpeciesAwakening",
+		Title = "Awakening",
+		Description = "Discover or confirm your supernatural nature.",
+		Type = "Main",
+		Objectives = {
+			{Type = "Choice", Target = "SpeciesSelection", Text = "Choose or awaken your species"},
+			{Type = "Train", Target = "TrainingRoom", Text = "Complete basic training"},
+		},
+		Rewards = {
+			XP = 100,
+			Moonstones = 50,
+		},
+		Next = "EclipseDisturbance",
+	},
+
+	EclipseDisturbance = {
+		Id = "EclipseDisturbance",
+		Title = "The Eclipse Prophecy – Disturbance",
+		Description = "Strange magical fluctuations are reported around town. Investigate the source.",
+		Type = "Main",
+		Objectives = {
+			{Type = "Explore", Target = "TownSquare", Text = "Investigate the Town Square"},
+			{Type = "Talk", Target = "ElderMira", Text = "Speak with Elder Mira"},
+			{Type = "Collect", Target = "EclipseFragment", Count = 1, Text = "Recover a strange fragment"},
+		},
+		Rewards = {
+			XP = 200,
+			Moonstones = 100,
+			Items = {"EclipseFragment"},
+		},
+		Next = "FactionChoice",
+	},
+
+	FactionChoice = {
+		Id = "FactionChoice",
+		Title = "Choosing Sides",
+		Description = "Different factions seek the Eclipse Relic for their own reasons. Decide where your loyalty begins.",
+		Type = "Main",
+		Objectives = {
+			{Type = "Talk", Target = "VampireElder", Text = "Hear the Vampire House offer"},
+			{Type = "Talk", Target = "CovenLeader", Text = "Hear the Coven offer"},
+			{Type = "Talk", Target = "PackAlpha", Text = "Hear the Pack offer"},
+			{Type = "Choice", Target = "JoinFaction", Text = "Choose a starting faction (or remain independent)"},
+		},
+		Rewards = {
+			XP = 150,
+			Moonstones = 75,
+		},
+	},
+
+	-- Side / Species quests
+	VampireDynasty = {
+		Id = "VampireDynasty",
+		Title = "Vampire Dynasty",
+		Description = "Investigate a forgotten bloodline and rise within the vampire houses.",
+		Type = "Side",
+		RequiredSpecies = "Vampire",
+		Objectives = {
+			{Type = "Explore", Target = "VampireManor", Text = "Enter the Vampire Manor"},
+			{Type = "Collect", Target = "FamilyPortrait", Count = 3, Text = "Recover lost family records"},
+		},
+		Rewards = {
+			XP = 300,
+			Moonstones = 150,
+			Reputation = {Faction = "VampireHouses", Amount = 50},
+		},
+	},
+
+	TheWitchsGrimoire = {
+		Id = "TheWitchsGrimoire",
+		Title = "The Witch's Grimoire",
+		Description = "Recover pages of an ancient grimoire scattered across the ritual grounds.",
+		Type = "Side",
+		RequiredSpecies = "Witch",
+		Objectives = {
+			{Type = "Collect", Target = "GrimoirePage", Count = 5, Text = "Collect Grimoire Pages"},
+			{Type = "Ritual", Target = "RitualGrounds", Text = "Perform the Binding Ritual"},
+		},
+		Rewards = {
+			XP = 280,
+			Moonstones = 140,
+		},
+	},
+
+	TheWolfsAwakening = {
+		Id = "TheWolfsAwakening",
+		Title = "The Wolf's Awakening",
+		Description = "Learn to control the transformation and earn the trust of a pack.",
+		Type = "Side",
+		RequiredSpecies = "Werewolf",
+		Objectives = {
+			{Type = "Transform", Target = "WolfForm", Text = "Successfully transform under the moon"},
+			{Type = "Talk", Target = "PackAlpha", Text = "Prove yourself to the Alpha"},
+		},
+		Rewards = {
+			XP = 250,
+			Moonstones = 120,
+		},
+	},
+
+	TheHereticPath = {
+		Id = "TheHereticPath",
+		Title = "The Heretic Path",
+		Description = "A rare and dangerous path for those who can siphon. Follow it carefully.",
+		Type = "Side",
+		RequiredSpecies = "Siphoner",
+		Objectives = {
+			{Type = "Collect", Target = "EclipseFragment", Count = 3, Text = "Gather Eclipse Fragments"},
+			{Type = "Talk", Target = "HereticMentor", Text = "Seek the mentor who knows the old ways"},
+			{Type = "Ritual", Target = "HiddenChamber", Text = "Complete the Heretic Ritual"},
+		},
+		Rewards = {
+			XP = 500,
+			Moonstones = 250,
+			EvolutionUnlock = "Heretic",
+		},
+	},
+}
+
+function QuestConfig.Get(id)
+	return QuestConfig.Quests[id]
+end
+
+return QuestConfig
+]]></ProtectedString>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="RBX9">
+        <Properties>
+          <string name="Name">FactionConfig</string>
+          <ProtectedString name="Source"><![CDATA[--[[
+	Midnight Legacies – Factions, Covens & Packs
+]]
+
+local FactionConfig = {}
+
+FactionConfig.Factions = {
+	VampireHouses = {
+		DisplayName = "The Vampire Houses",
+		Description = "Ancient bloodlines that value power, elegance and control of the night.",
+		EmblemColor = Color3.fromRGB(140, 20, 30),
+		StartingReputation = 0,
+		Ranks = {"Initiate", "Bloodbound", "Elder", "Lord", "High Lord"},
+	},
+	WitchCovens = {
+		DisplayName = "The Covens",
+		Description = "Circles of witches bound by bloodline, knowledge and ritual.",
+		EmblemColor = Color3.fromRGB(90, 50, 180),
+		StartingReputation = 0,
+		Ranks = {"Novice", "Adept", "Circle Member", "High Witch", "Matriarch"},
+	},
+	WerewolfPacks = {
+		DisplayName = "The Packs",
+		Description = "Tight-knit groups of werewolves who value loyalty, strength and the moon.",
+		EmblemColor = Color3.fromRGB(180, 100, 30),
+		StartingReputation = 0,
+		Ranks = {"Omega", "Member", "Beta", "Lieutenant", "Alpha"},
+	},
+	HunterOrder = {
+		DisplayName = "The Hunter Order",
+		Description = "Humans and allies dedicated to understanding and, when necessary, containing the supernatural.",
+		EmblemColor = Color3.fromRGB(80, 90, 110),
+		StartingReputation = 0,
+		Ranks = {"Recruit", "Investigator", "Hunter", "Veteran", "Commander"},
+	},
+	Independents = {
+		DisplayName = "Independents",
+		Description = "Those who walk alone or form temporary alliances.",
+		EmblemColor = Color3.fromRGB(120, 120, 140),
+		StartingReputation = 0,
+		Ranks = {"Lone Wolf"},
+	},
+}
+
+function FactionConfig.Get(name)
+	return FactionConfig.Factions[name]
+end
+
+return FactionConfig
+]]></ProtectedString>
+        </Properties>
+      </Item>
+    </Item>
+  </Item>
+  <Item class="ServerScriptService" referent="RBX10">
+    <Properties>
+      <string name="Name">ServerScriptService</string>
+    </Properties>
+    <Item class="Folder" referent="RBX11">
+      <Properties>
+        <string name="Name">Services</string>
+      </Properties>
+      <Item class="ModuleScript" referent="RBX12">
+        <Properties>
+          <string name="Name">DataService</string>
+          <ProtectedString name="Source"><![CDATA[--[[
+	Midnight Legacies – DataService
+	Handles player profile creation, loading and saving.
+	Uses DataStoreService. Add proper error handling & retries in production.
+]]
+
+local DataStoreService = game:GetService("DataStoreService")
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local SpeciesConfig = require(ReplicatedStorage.Modules.SpeciesConfig)
+
+local DataService = {}
+DataService.__index = DataService
+
+local PROFILE_STORE = DataStoreService:GetDataStore("MidnightLegacies_Profiles_v1")
+
+local DEFAULT_PROFILE = {
+	Name = "",
+	Title = "Newcomer",
+	Species = "Human",
+	Evolution = nil,
+	Level = 1,
+	XP = 0,
+	Moonstones = 50,
+	Health = 100,
+	Resource = 100, -- Blood / Mana / Rage / Focus
+	MaxResource = 100,
+	UnlockedAbilities = {},
+	EquippedAbilities = {},
+	Inventory = {},
+	Quests = {
+		Active = {},
+		Completed = {},
+	},
+	Faction = "Independents",
+	Reputation = {},
+	Stats = {
+		Strength = 10,
+		Defense = 10,
+		Speed = 16,
+	},
+	Discoveries = {},
+	Settings = {
+		MusicVolume = 0.7,
+		SFXVolume = 0.8,
+		ShowDamageNumbers = true,
+	},
+	LastLogin = 0,
+}
+
+function DataService.new()
+	local self = setmetatable({}, DataService)
+	self.Profiles = {} -- [userId] = profile table
+	return self
+end
+
+function DataService:CreateDefaultProfile(player)
+	local profile = table.clone(DEFAULT_PROFILE)
+	profile.Name = player.Name
+	profile.UnlockedAbilities = SpeciesConfig.GetSpecies("Human").StartingAbilities
+	profile.EquippedAbilities = {table.unpack(profile.UnlockedAbilities, 1, 3)}
+	profile.LastLogin = os.time()
+	return profile
+end
+
+function DataService:LoadProfile(player)
+	local userId = player.UserId
+	local success, data = pcall(function()
+		return PROFILE_STORE:GetAsync("Player_" .. userId)
+	end)
+
+	if success and data then
+		-- Merge with defaults in case new fields were added
+		for k, v in pairs(DEFAULT_PROFILE) do
+			if data[k] == nil then
+				data[k] = typeof(v) == "table" and table.clone(v) or v
+			end
+		end
+		self.Profiles[userId] = data
+		print("[DataService] Loaded profile for", player.Name)
+	else
+		local profile = self:CreateDefaultProfile(player)
+		self.Profiles[userId] = profile
+		print("[DataService] Created new profile for", player.Name)
+	end
+
+	return self.Profiles[userId]
+end
+
+function DataService:SaveProfile(player)
+	local userId = player.UserId
+	local profile = self.Profiles[userId]
+	if not profile then return end
+
+	profile.LastLogin = os.time()
+	local success, err = pcall(function()
+		PROFILE_STORE:SetAsync("Player_" .. userId, profile)
+	end)
+
+	if not success then
+		warn("[DataService] Failed to save profile for", player.Name, err)
+	else
+		print("[DataService] Saved profile for", player.Name)
+	end
+end
+
+function DataService:GetProfile(player)
+	return self.Profiles[player.UserId]
+end
+
+function DataService:UpdateProfile(player, key, value)
+	local profile = self.Profiles[player.UserId]
+	if profile then
+		profile[key] = value
+	end
+end
+
+function DataService:AddXP(player, amount)
+	local profile = self:GetProfile(player)
+	if not profile then return end
+
+	profile.XP += amount
+	local required = profile.Level * 100 -- simple curve
+
+	while profile.XP >= required do
+		profile.XP -= required
+		profile.Level += 1
+		required = profile.Level * 100
+		-- Fire level-up event here later
+	end
+end
+
+function DataService:AddMoonstones(player, amount)
+	local profile = self:GetProfile(player)
+	if profile then
+		profile.Moonstones += amount
+	end
+end
+
+-- Auto-save on leave
+Players.PlayerRemoving:Connect(function(player)
+	-- The service instance will handle this when properly connected
+end)
+
+return DataService
+]]></ProtectedString>
+        </Properties>
+      </Item>
+      <Item class="ModuleScript" referent="RBX13">
+        <Properties>
+          <string name="Name">CombatService</string>
+          <ProtectedString name="Source"><![CDATA[--[[
+	Midnight Legacies – Combat Service (skeleton)
+	Handles ability usage validation and basic damage.
+	Expand with proper hit detection, VFX, and animations.
+]]
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+
+local AbilityConfig = require(ReplicatedStorage.Modules.AbilityConfig)
+
+local CombatService = {}
+CombatService.__index = CombatService
+
+function CombatService.new(dataService)
+	local self = setmetatable({}, CombatService)
+	self.DataService = dataService
+	self.Cooldowns = {} -- [userId][abilityId] = tick()
+	return self
+end
+
+function CombatService:CanUseAbility(player, abilityId)
+	local profile = self.DataService:GetProfile(player)
+	if not profile then return false, "No profile" end
+
+	local ability = AbilityConfig.Get(abilityId)
+	if not ability then return false, "Invalid ability" end
+
+	-- Check if unlocked / equipped
+	local unlocked = false
+	for _, id in ipairs(profile.UnlockedAbilities) do
+		if id == abilityId then unlocked = true break end
+	end
+	if not unlocked then return false, "Ability not unlocked" end
+
+	-- Cooldown
+	local userCd = self.Cooldowns[player.UserId]
+	if userCd and userCd[abilityId] and tick() < userCd[abilityId] then
+		return false, "On cooldown"
+	end
+
+	-- Resource
+	if profile.Resource < ability.ResourceCost then
+		return false, "Not enough resource"
+	end
+
+	return true, ability
+end
+
+function CombatService:UseAbility(player, abilityId, targetPosition)
+	local ok, result = self:CanUseAbility(player, abilityId)
+	if not ok then
+		return false, result
+	end
+
+	local ability = result
+	local profile = self.DataService:GetProfile(player)
+
+	-- Spend resource
+	profile.Resource = math.max(0, profile.Resource - ability.ResourceCost)
+
+	-- Set cooldown
+	self.Cooldowns[player.UserId] = self.Cooldowns[player.UserId] or {}
+	self.Cooldowns[player.UserId][abilityId] = tick() + ability.Cooldown
+
+	-- TODO: Apply actual effects, spawn VFX, play animations
+	-- For now just log
+	print(string.format("[Combat] %s used %s", player.Name, ability.DisplayName))
+
+	return true, ability
+end
+
+return CombatService
+]]></ProtectedString>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="Script" referent="RBX14">
+      <Properties>
+        <string name="Name">MainServer</string>
+        <ProtectedString name="Source"><![CDATA[--[[
+	Midnight Legacies – Main Server Bootstrap
+	Place this Script in ServerScriptService.
+]]
+
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local ServerScriptService = game:GetService("ServerScriptService")
+
+-- Ensure folders exist
+local modulesFolder = ReplicatedStorage:FindFirstChild("Modules") or Instance.new("Folder")
+modulesFolder.Name = "Modules"
+modulesFolder.Parent = ReplicatedStorage
+
+local servicesFolder = ServerScriptService:FindFirstChild("Services") or Instance.new("Folder")
+servicesFolder.Name = "Services"
+servicesFolder.Parent = ServerScriptService
+
+-- Require services (they must be ModuleScripts)
+local DataService = require(servicesFolder:WaitForChild("DataService")).new()
+
+-- Simple remote events for client ↔ server communication
+local function createRemote(name)
+	local r = Instance.new("RemoteEvent")
+	r.Name = name
+	r.Parent = ReplicatedStorage
+	return r
+end
+
+local Remotes = {
+	RequestProfile = createRemote("RequestProfile"),
+	ProfileUpdated = createRemote("ProfileUpdated"),
+	SelectSpecies = createRemote("SelectSpecies"),
+	UseAbility = createRemote("UseAbility"),
+	AcceptQuest = createRemote("AcceptQuest"),
+	CompleteObjective = createRemote("CompleteObjective"),
+}
+
+-- Player join
+Players.PlayerAdded:Connect(function(player)
+	local profile = DataService:LoadProfile(player)
+
+	-- Give the client their profile
+	Remotes.RequestProfile.OnServerEvent:Connect(function(requestingPlayer)
+		if requestingPlayer == player then
+			Remotes.ProfileUpdated:FireClient(player, profile)
+		end
+	end)
+
+	-- Species selection (first time or via menu)
+	Remotes.SelectSpecies.OnServerEvent:Connect(function(requestingPlayer, speciesName)
+		if requestingPlayer ~= player then return end
+		local SpeciesConfig = require(modulesFolder.SpeciesConfig)
+		local speciesData = SpeciesConfig.GetSpecies(speciesName)
+		if not speciesData then return end
+
+		profile.Species = speciesName
+		profile.UnlockedAbilities = speciesData.StartingAbilities
+		profile.EquippedAbilities = {table.unpack(speciesData.StartingAbilities, 1, 3)}
+		profile.Stats = table.clone(speciesData.BaseStats)
+		profile.Health = speciesData.BaseStats.Health
+		profile.MaxResource = 100
+		profile.Resource = 100
+
+		DataService:SaveProfile(player)
+		Remotes.ProfileUpdated:FireClient(player, profile)
+		print(player.Name, "selected species:", speciesName)
+	end)
+
+	print("[Midnight Legacies] Player joined:", player.Name)
+end)
+
+Players.PlayerRemoving:Connect(function(player)
+	DataService:SaveProfile(player)
+	DataService.Profiles[player.UserId] = nil
+end)
+
+-- Basic day/night cycle
+local Lighting = game:GetService("Lighting")
+local dayLength = 12 * 60 -- 12 real minutes = full day for testing
+
+task.spawn(function()
+	while true do
+		for i = 0, 24, 0.1 do
+			Lighting.ClockTime = i
+			task.wait(dayLength / 240)
+		end
+	end
+end)
+
+print("[Midnight Legacies] Server started – framework ready")
+]]></ProtectedString>
+        <bool name="Disabled">false</bool>
+      </Properties>
+    </Item>
+    <Item class="Script" referent="RBX15">
+      <Properties>
+        <string name="Name">MapBuilder</string>
+        <ProtectedString name="Source"><![CDATA[--[[
+	Midnight Legacies – Simple Map Builder
+	Creates basic region placeholders so the world isn't an empty baseplate.
+	Replace these with real models / terrain later.
+]]
+
+local Workspace = game:GetService("Workspace")
+
+-- Clear default baseplate if present
+local baseplate = Workspace:FindFirstChild("Baseplate")
+if baseplate then baseplate:Destroy() end
+
+local function createPart(props)
+	local p = Instance.new("Part")
+	p.Anchored = true
+	p.TopSurface = Enum.SurfaceType.Smooth
+	p.BottomSurface = Enum.SurfaceType.Smooth
+	for k, v in pairs(props) do
+		p[k] = v
+	end
+	p.Parent = Workspace
+	return p
+end
+
+local function createRegionLabel(position, text)
+	local part = createPart({
+		Name = "RegionLabel_" .. text,
+		Size = Vector3.new(20, 1, 8),
+		Position = position + Vector3.new(0, 8, 0),
+		Color = Color3.fromRGB(40, 30, 55),
+		Material = Enum.Material.Neon,
+		Transparency = 0.3,
+	})
+	local bb = Instance.new("BillboardGui")
+	bb.Size = UDim2.new(0, 200, 0, 50)
+	bb.StudsOffset = Vector3.new(0, 3, 0)
+	bb.AlwaysOnTop = true
+	bb.Parent = part
+	local label = Instance.new("TextLabel")
+	label.Size = UDim2.new(1, 0, 1, 0)
+	label.BackgroundTransparency = 1
+	label.Text = text
+	label.TextColor3 = Color3.fromRGB(220, 200, 255)
+	label.TextSize = 24
+	label.Font = Enum.Font.GothamBold
+	label.Parent = bb
+end
+
+-- Ground
+createPart({
+	Name = "Ground",
+	Size = Vector3.new(800, 4, 800),
+	Position = Vector3.new(0, -2, 0),
+	Color = Color3.fromRGB(25, 30, 22),
+	Material = Enum.Material.Grass,
+})
+
+-- === MIDNIGHT ACADEMY (center) ===
+createPart({
+	Name = "AcademyFloor",
+	Size = Vector3.new(120, 2, 100),
+	Position = Vector3.new(0, 1, 0),
+	Color = Color3.fromRGB(45, 40, 55),
+	Material = Enum.Material.Slate,
+})
+createPart({
+	Name = "AcademyMainHall",
+	Size = Vector3.new(60, 25, 40),
+	Position = Vector3.new(0, 13.5, -10),
+	Color = Color3.fromRGB(55, 45, 70),
+	Material = Enum.Material.Brick,
+})
+createPart({
+	Name = "AcademyTower",
+	Size = Vector3.new(16, 45, 16),
+	Position = Vector3.new(40, 23.5, 20),
+	Color = Color3.fromRGB(50, 40, 65),
+	Material = Enum.Material.Brick,
+})
+createRegionLabel(Vector3.new(0, 2, 40), "MIDNIGHT ACADEMY")
+
+-- === TOWN (east) ===
+createPart({
+	Name = "TownSquare",
+	Size = Vector3.new(80, 1, 80),
+	Position = Vector3.new(200, 0.5, 0),
+	Color = Color3.fromRGB(60, 55, 50),
+	Material = Enum.Material.Concrete,
+})
+for i = 1, 5 do
+	createPart({
+		Name = "TownBuilding" .. i,
+		Size = Vector3.new(18, 12 + (i % 3) * 4, 14),
+		Position = Vector3.new(170 + (i * 20), 7, -40 + (i % 2) * 50),
+		Color = Color3.fromRGB(70, 60, 55),
+		Material = Enum.Material.Brick,
+	})
+end
+createRegionLabel(Vector3.new(200, 2, 50), "THE TOWN")
+
+-- === ANCIENT FOREST (west) ===
+createPart({
+	Name = "ForestGround",
+	Size = Vector3.new(200, 2, 200),
+	Position = Vector3.new(-220, 0, 0),
+	Color = Color3.fromRGB(20, 35, 18),
+	Material = Enum.Material.Grass,
+})
+for i = 1, 25 do
+	local x = -220 + math.random(-80, 80)
+	local z = math.random(-80, 80)
+	createPart({
+		Name = "TreeTrunk" .. i,
+		Size = Vector3.new(3, 12 + math.random(0, 8), 3),
+		Position = Vector3.new(x, 7, z),
+		Color = Color3.fromRGB(40, 28, 18),
+		Material = Enum.Material.Wood,
+	})
+	createPart({
+		Name = "TreeCanopy" .. i,
+		Size = Vector3.new(10, 8, 10),
+		Position = Vector3.new(x, 16, z),
+		Color = Color3.fromRGB(25, 50, 25),
+		Material = Enum.Material.LeafyGrass,
+		Shape = Enum.PartType.Ball,
+	})
+end
+createRegionLabel(Vector3.new(-220, 2, 100), "ANCIENT FOREST")
+
+-- === VAMPIRE MANOR (north) ===
+createPart({
+	Name = "ManorBase",
+	Size = Vector3.new(70, 3, 50),
+	Position = Vector3.new(0, 1.5, -200),
+	Color = Color3.fromRGB(35, 30, 40),
+	Material = Enum.Material.Slate,
+})
+createPart({
+	Name = "ManorMain",
+	Size = Vector3.new(50, 28, 35),
+	Position = Vector3.new(0, 16, -200),
+	Color = Color3.fromRGB(45, 35, 50),
+	Material = Enum.Material.Brick,
+})
+createPart({
+	Name = "ManorTowerL",
+	Size = Vector3.new(14, 38, 14),
+	Position = Vector3.new(-30, 20, -210),
+	Color = Color3.fromRGB(40, 30, 45),
+	Material = Enum.Material.Brick,
+})
+createPart({
+	Name = "ManorTowerR",
+	Size = Vector3.new(14, 38, 14),
+	Position = Vector3.new(30, 20, -210),
+	Color = Color3.fromRGB(40, 30, 45),
+	Material = Enum.Material.Brick,
+})
+createRegionLabel(Vector3.new(0, 2, -160), "VAMPIRE MANOR")
+
+-- === WITCH RITUAL GROUNDS (south-west) ===
+createPart({
+	Name = "RitualPlatform",
+	Size = Vector3.new(40, 2, 40),
+	Position = Vector3.new(-150, 1, 180),
+	Color = Color3.fromRGB(50, 35, 70),
+	Material = Enum.Material.Slate,
+})
+for i = 1, 8 do
+	local angle = (i / 8) * math.pi * 2
+	createPart({
+		Name = "RitualStone" .. i,
+		Size = Vector3.new(3, 8, 3),
+		Position = Vector3.new(-150 + math.cos(angle) * 18, 5, 180 + math.sin(angle) * 18),
+		Color = Color3.fromRGB(60, 45, 90),
+		Material = Enum.Material.Rock,
+	})
+end
+createRegionLabel(Vector3.new(-150, 2, 210), "RITUAL GROUNDS")
+
+-- === MOONLIT LAKE (south) ===
+createPart({
+	Name = "Lake",
+	Size = Vector3.new(100, 2, 70),
+	Position = Vector3.new(50, -1, 200),
+	Color = Color3.fromRGB(30, 50, 80),
+	Material = Enum.Material.Glass,
+	Transparency = 0.4,
+})
+createPart({
+	Name = "Pier",
+	Size = Vector3.new(8, 1, 25),
+	Position = Vector3.new(50, 1, 160),
+	Color = Color3.fromRGB(60, 45, 30),
+	Material = Enum.Material.Wood,
+})
+createRegionLabel(Vector3.new(50, 2, 240), "MOONLIT LAKE")
+
+-- Spawn location
+local spawn = Instance.new("SpawnLocation")
+spawn.Name = "AcademySpawn"
+spawn.Size = Vector3.new(12, 1, 12)
+spawn.Position = Vector3.new(0, 3, 50)
+spawn.Anchored = true
+spawn.Neutral = true
+spawn.Duration = 0
+spawn.Color = Color3.fromRGB(80, 60, 120)
+spawn.Material = Enum.Material.Neon
+spawn.Parent = Workspace
+
+-- Lighting mood
+local Lighting = game:GetService("Lighting")
+Lighting.Ambient = Color3.fromRGB(40, 35, 55)
+Lighting.OutdoorAmbient = Color3.fromRGB(30, 30, 45)
+Lighting.Brightness = 1.5
+Lighting.ClockTime = 22 -- start at night
+Lighting.FogEnd = 600
+Lighting.FogColor = Color3.fromRGB(20, 15, 30)
+
+print("[Midnight Legacies] Map regions created")
+]]></ProtectedString>
+        <bool name="Disabled">false</bool>
+      </Properties>
+    </Item>
+  </Item>
+  <Item class="StarterPlayer" referent="RBX16">
+    <Properties>
+      <string name="Name">StarterPlayer</string>
+    </Properties>
+    <Item class="StarterPlayerScripts" referent="RBX17">
+      <Properties>
+        <string name="Name">StarterPlayerScripts</string>
+      </Properties>
+      <Item class="LocalScript" referent="RBX18">
+        <Properties>
+          <string name="Name">ClientMain</string>
+          <ProtectedString name="Source"><![CDATA[--[[
+	Midnight Legacies – Client Main
+	Place this LocalScript in StarterPlayerScripts.
+]]
+
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local StarterGui = game:GetService("StarterGui")
+
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- Wait for remotes
+local function waitForRemote(name)
+	return ReplicatedStorage:WaitForChild(name, 10)
+end
+
+local RequestProfile = waitForRemote("RequestProfile")
+local ProfileUpdated = waitForRemote("ProfileUpdated")
+local SelectSpecies = waitForRemote("SelectSpecies")
+
+local currentProfile = nil
+
+-- Simple notification
+local function notify(text)
+	pcall(function()
+		StarterGui:SetCore("SendNotification", {
+			Title = "Midnight Legacies",
+			Text = text,
+			Duration = 4,
+		})
+	end)
+end
+
+ProfileUpdated.OnClientEvent:Connect(function(profile)
+	currentProfile = profile
+	print("[Client] Profile received – Species:", profile.Species, "Level:", profile.Level)
+	notify("Welcome, " .. (profile.Title or "Newcomer") .. " • " .. profile.Species)
+end)
+
+-- Request profile once everything is ready
+task.wait(1)
+RequestProfile:FireServer()
+
+-- Expose a simple global for other client scripts
+_G.MidnightLegacies = {
+	GetProfile = function()
+		return currentProfile
+	end,
+	SelectSpecies = function(speciesName)
+		SelectSpecies:FireServer(speciesName)
+	end,
+}
+
+print("[Midnight Legacies] Client framework loaded")
+]]></ProtectedString>
+          <bool name="Disabled">false</bool>
+        </Properties>
+      </Item>
+    </Item>
+  </Item>
+  <Item class="StarterGui" referent="RBX19">
+    <Properties>
+      <string name="Name">StarterGui</string>
+    </Properties>
+    <Item class="ScreenGui" referent="RBX20">
+      <Properties>
+        <string name="Name">CharacterCreationGui</string>
+        <bool name="ResetOnSpawn">false</bool>
+        <bool name="IgnoreGuiInset">true</bool>
+        <int name="ZIndexBehavior">1</int>
+      </Properties>
+      <Item class="LocalScript" referent="RBX21">
+        <Properties>
+          <string name="Name">CharacterCreation</string>
+          <ProtectedString name="Source"><![CDATA[--[[
+	Midnight Legacies – Character Creation & Species Selection UI
+	Place this LocalScript inside a ScreenGui named "CharacterCreationGui" in StarterGui,
+	or let it create the ScreenGui itself.
+]]
+
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local TweenService = game:GetService("TweenService")
+
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+-- Create the ScreenGui if it doesn't exist
+local screenGui = playerGui:FindFirstChild("CharacterCreationGui")
+if not screenGui then
+	screenGui = Instance.new("ScreenGui")
+	screenGui.Name = "CharacterCreationGui"
+	screenGui.ResetOnSpawn = false
+	screenGui.IgnoreGuiInset = true
+	screenGui.Parent = playerGui
+end
+
+-- Colors – gothic palette
+local Colors = {
+	Background = Color3.fromRGB(12, 10, 18),
+	Panel = Color3.fromRGB(22, 18, 32),
+	Accent = Color3.fromRGB(140, 40, 60),
+	Accent2 = Color3.fromRGB(90, 60, 160),
+	Text = Color3.fromRGB(230, 220, 240),
+	Muted = Color3.fromRGB(160, 150, 170),
+	Vampire = Color3.fromRGB(160, 30, 45),
+	Witch = Color3.fromRGB(110, 70, 200),
+	Werewolf = Color3.fromRGB(190, 110, 40),
+	Human = Color3.fromRGB(140, 150, 170),
+	Siphoner = Color3.fromRGB(0, 180, 160),
+}
+
+local speciesData = {
+	{Id = "Vampire", Name = "Vampire", Desc = "Immortal predator of the night. Speed, strength and blood.", Color = Colors.Vampire},
+	{Id = "Witch", Name = "Witch", Desc = "Master of spells, rituals and arcane bloodlines.", Color = Colors.Witch},
+	{Id = "Werewolf", Name = "Werewolf", Desc = "Child of the moon. Pack, rage and transformation.", Color = Colors.Werewolf},
+	{Id = "Human", Name = "Human", Desc = "Resourceful hunter, alchemist and investigator.", Color = Colors.Human},
+	{Id = "Siphoner", Name = "Siphoner", Desc = "Absorbs magic from the world. Path to the Heretic.", Color = Colors.Siphoner},
+}
+
+-- Main frame
+local main = Instance.new("Frame")
+main.Name = "Main"
+main.Size = UDim2.new(1, 0, 1, 0)
+main.BackgroundColor3 = Colors.Background
+main.BorderSizePixel = 0
+main.Parent = screenGui
+
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, 0, 0, 80)
+title.Position = UDim2.new(0, 0, 0.08, 0)
+title.BackgroundTransparency = 1
+title.Text = "MIDNIGHT LEGACIES"
+title.TextColor3 = Colors.Text
+title.TextSize = 42
+title.Font = Enum.Font.GothamBold
+title.Parent = main
+
+local subtitle = Instance.new("TextLabel")
+subtitle.Size = UDim2.new(1, 0, 0, 30)
+subtitle.Position = UDim2.new(0, 0, 0.08, 70)
+subtitle.BackgroundTransparency = 1
+subtitle.Text = "Choose your supernatural path"
+subtitle.TextColor3 = Colors.Muted
+subtitle.TextSize = 18
+subtitle.Font = Enum.Font.Gotham
+subtitle.Parent = main
+
+-- Species cards container
+local container = Instance.new("Frame")
+container.Size = UDim2.new(0.9, 0, 0.55, 0)
+container.Position = UDim2.new(0.05, 0, 0.28, 0)
+container.BackgroundTransparency = 1
+container.Parent = main
+
+local layout = Instance.new("UIListLayout")
+layout.FillDirection = Enum.FillDirection.Horizontal
+layout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+layout.Padding = UDim.new(0, 16)
+layout.Parent = container
+
+local selectedSpecies = nil
+local cards = {}
+
+local function createCard(data)
+	local card = Instance.new("Frame")
+	card.Size = UDim2.new(0, 180, 1, 0)
+	card.BackgroundColor3 = Colors.Panel
+	card.BorderSizePixel = 0
+	card.Parent = container
+
+	local corner = Instance.new("UICorner")
+	corner.CornerRadius = UDim.new(0, 12)
+	corner.Parent = card
+
+	local stroke = Instance.new("UIStroke")
+	stroke.Color = data.Color
+	stroke.Thickness = 2
+	stroke.Transparency = 0.6
+	stroke.Parent = card
+
+	local nameLabel = Instance.new("TextLabel")
+	nameLabel.Size = UDim2.new(1, -16, 0, 40)
+	nameLabel.Position = UDim2.new(0, 8, 0, 20)
+	nameLabel.BackgroundTransparency = 1
+	nameLabel.Text = data.Name
+	nameLabel.TextColor3 = data.Color
+	nameLabel.TextSize = 22
+	nameLabel.Font = Enum.Font.GothamBold
+	nameLabel.Parent = card
+
+	local descLabel = Instance.new("TextLabel")
+	descLabel.Size = UDim2.new(1, -20, 0, 100)
+	descLabel.Position = UDim2.new(0, 10, 0, 70)
+	descLabel.BackgroundTransparency = 1
+	descLabel.Text = data.Desc
+	descLabel.TextColor3 = Colors.Muted
+	descLabel.TextSize = 14
+	descLabel.Font = Enum.Font.Gotham
+	descLabel.TextWrapped = true
+	descLabel.TextYAlignment = Enum.TextYAlignment.Top
+	descLabel.Parent = card
+
+	local button = Instance.new("TextButton")
+	button.Size = UDim2.new(1, -24, 0, 36)
+	button.Position = UDim2.new(0, 12, 1, -50)
+	button.BackgroundColor3 = data.Color
+	button.Text = "Select"
+	button.TextColor3 = Color3.new(1, 1, 1)
+	button.TextSize = 16
+	button.Font = Enum.Font.GothamBold
+	button.Parent = card
+
+	local btnCorner = Instance.new("UICorner")
+	btnCorner.CornerRadius = UDim.new(0, 8)
+	btnCorner.Parent = button
+
+	button.MouseButton1Click:Connect(function()
+		selectedSpecies = data.Id
+		for _, c in pairs(cards) do
+			c.Stroke.Transparency = 0.6
+		end
+		stroke.Transparency = 0
+		notify("Selected: " .. data.Name)
+	end)
+
+	cards[data.Id] = {Card = card, Stroke = stroke}
+	return card
+end
+
+for _, data in ipairs(speciesData) do
+	createCard(data)
+end
+
+-- Confirm button
+local confirm = Instance.new("TextButton")
+confirm.Size = UDim2.new(0, 260, 0, 50)
+confirm.Position = UDim2.new(0.5, -130, 0.88, 0)
+confirm.BackgroundColor3 = Colors.Accent
+confirm.Text = "Begin Your Legacy"
+confirm.TextColor3 = Color3.new(1, 1, 1)
+confirm.TextSize = 20
+confirm.Font = Enum.Font.GothamBold
+confirm.Parent = main
+
+local confirmCorner = Instance.new("UICorner")
+confirmCorner.CornerRadius = UDim.new(0, 10)
+confirmCorner.Parent = confirm
+
+confirm.MouseButton1Click:Connect(function()
+	if not selectedSpecies then
+		notify("Please select a species first")
+		return
+	end
+
+	if _G.MidnightLegacies and _G.MidnightLegacies.SelectSpecies then
+		_G.MidnightLegacies.SelectSpecies(selectedSpecies)
+	end
+
+	-- Fade out
+	local tween = TweenService:Create(main, TweenInfo.new(0.6), {BackgroundTransparency = 1})
+	tween:Play()
+	tween.Completed:Connect(function()
+		screenGui:Destroy()
+	end)
+end)
+
+function notify(text)
+	-- Simple print for now; replace with proper toast later
+	print("[UI]", text)
+end
+
+print("[Midnight Legacies] Character Creation UI ready")
+]]></ProtectedString>
+          <bool name="Disabled">false</bool>
+        </Properties>
+      </Item>
+    </Item>
+    <Item class="ScreenGui" referent="RBX22">
+      <Properties>
+        <string name="Name">MidnightHUD</string>
+        <bool name="ResetOnSpawn">false</bool>
+        <bool name="IgnoreGuiInset">true</bool>
+        <int name="ZIndexBehavior">1</int>
+      </Properties>
+      <Item class="LocalScript" referent="RBX23">
+        <Properties>
+          <string name="Name">HUD</string>
+          <ProtectedString name="Source"><![CDATA[--[[
+	Midnight Legacies – Main HUD
+	Creates a dark gothic HUD with health, resource, level, and ability slots.
+]]
+
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "MidnightHUD"
+screenGui.ResetOnSpawn = false
+screenGui.IgnoreGuiInset = true
+screenGui.Parent = playerGui
+
+local Colors = {
+	BarBG = Color3.fromRGB(20, 16, 28),
+	Health = Color3.fromRGB(160, 40, 50),
+	Resource = Color3.fromRGB(100, 60, 180),
+	Text = Color3.fromRGB(230, 220, 240),
+	Muted = Color3.fromRGB(150, 140, 160),
+}
+
+-- Bottom left status panel
+local status = Instance.new("Frame")
+status.Name = "StatusPanel"
+status.Size = UDim2.new(0, 280, 0, 90)
+status.Position = UDim2.new(0, 20, 1, -120)
+status.BackgroundColor3 = Colors.BarBG
+status.BackgroundTransparency = 0.25
+status.BorderSizePixel = 0
+status.Parent = screenGui
+
+local statusCorner = Instance.new("UICorner")
+statusCorner.CornerRadius = UDim.new(0, 10)
+statusCorner.Parent = status
+
+-- Health bar
+local healthBG = Instance.new("Frame")
+healthBG.Size = UDim2.new(1, -20, 0, 14)
+healthBG.Position = UDim2.new(0, 10, 0, 18)
+healthBG.BackgroundColor3 = Color3.fromRGB(40, 20, 25)
+healthBG.BorderSizePixel = 0
+healthBG.Parent = status
+
+local healthBar = Instance.new("Frame")
+healthBar.Name = "HealthBar"
+healthBar.Size = UDim2.new(1, 0, 1, 0)
+healthBar.BackgroundColor3 = Colors.Health
+healthBar.BorderSizePixel = 0
+healthBar.Parent = healthBG
+
+local healthCorner = Instance.new("UICorner")
+healthCorner.CornerRadius = UDim.new(0, 4)
+healthCorner.Parent = healthBG
+local healthBarCorner = Instance.new("UICorner")
+healthBarCorner.CornerRadius = UDim.new(0, 4)
+healthBarCorner.Parent = healthBar
+
+-- Resource bar
+local resourceBG = Instance.new("Frame")
+resourceBG.Size = UDim2.new(1, -20, 0, 14)
+resourceBG.Position = UDim2.new(0, 10, 0, 40)
+resourceBG.BackgroundColor3 = Color3.fromRGB(30, 25, 45)
+resourceBG.BorderSizePixel = 0
+resourceBG.Parent = status
+
+local resourceBar = Instance.new("Frame")
+resourceBar.Name = "ResourceBar"
+resourceBar.Size = UDim2.new(0.8, 0, 1, 0)
+resourceBar.BackgroundColor3 = Colors.Resource
+resourceBar.BorderSizePixel = 0
+resourceBar.Parent = resourceBG
+
+local resCorner = Instance.new("UICorner")
+resCorner.CornerRadius = UDim.new(0, 4)
+resCorner.Parent = resourceBG
+local resBarCorner = Instance.new("UICorner")
+resBarCorner.CornerRadius = UDim.new(0, 4)
+resBarCorner.Parent = resourceBar
+
+-- Level / Title
+local levelLabel = Instance.new("TextLabel")
+levelLabel.Name = "LevelLabel"
+levelLabel.Size = UDim2.new(1, -20, 0, 20)
+levelLabel.Position = UDim2.new(0, 10, 0, 62)
+levelLabel.BackgroundTransparency = 1
+levelLabel.Text = "Lv. 1  •  Newcomer  •  Human"
+levelLabel.TextColor3 = Colors.Text
+levelLabel.TextSize = 14
+levelLabel.Font = Enum.Font.Gotham
+levelLabel.TextXAlignment = Enum.TextXAlignment.Left
+levelLabel.Parent = status
+
+-- Ability bar (bottom center)
+local abilityBar = Instance.new("Frame")
+abilityBar.Name = "AbilityBar"
+abilityBar.Size = UDim2.new(0, 320, 0, 64)
+abilityBar.Position = UDim2.new(0.5, -160, 1, -90)
+abilityBar.BackgroundTransparency = 1
+abilityBar.Parent = screenGui
+
+local abilityLayout = Instance.new("UIListLayout")
+abilityLayout.FillDirection = Enum.FillDirection.Horizontal
+abilityLayout.Padding = UDim.new(0, 8)
+abilityLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+abilityLayout.Parent = abilityBar
+
+for i = 1, 4 do
+	local slot = Instance.new("Frame")
+	slot.Name = "AbilitySlot" .. i
+	slot.Size = UDim2.new(0, 56, 0, 56)
+	slot.BackgroundColor3 = Color3.fromRGB(25, 20, 35)
+	slot.BorderSizePixel = 0
+	slot.Parent = abilityBar
+
+	local slotCorner = Instance.new("UICorner")
+	slotCorner.CornerRadius = UDim.new(0, 8)
+	slotCorner.Parent = slot
+
+	local stroke = Instance.new("UIStroke")
+	stroke.Color = Color3.fromRGB(80, 60, 110)
+	stroke.Thickness = 1.5
+	stroke.Parent = slot
+
+	local key = Instance.new("TextLabel")
+	key.Size = UDim2.new(1, 0, 1, 0)
+	key.BackgroundTransparency = 1
+	key.Text = tostring(i)
+	key.TextColor3 = Colors.Muted
+	key.TextSize = 18
+	key.Font = Enum.Font.GothamBold
+	key.Parent = slot
+end
+
+-- Mini currency
+local currency = Instance.new("TextLabel")
+currency.Name = "Moonstones"
+currency.Size = UDim2.new(0, 160, 0, 28)
+currency.Position = UDim2.new(1, -180, 0, 20)
+currency.BackgroundTransparency = 1
+currency.Text = "✦ 50 Moonstones"
+currency.TextColor3 = Color3.fromRGB(200, 180, 255)
+currency.TextSize = 16
+currency.Font = Enum.Font.GothamMedium
+currency.TextXAlignment = Enum.TextXAlignment.Right
+currency.Parent = screenGui
+
+print("[Midnight Legacies] HUD created")
+]]></ProtectedString>
+          <bool name="Disabled">false</bool>
+        </Properties>
+      </Item>
+    </Item>
+  </Item>
+  <Item class="Players" referent="RBX24">
+    <Properties>
+      <string name="Name">Players</string>
+    </Properties>
+  </Item>
+  <Item class="Teams" referent="RBX25">
+    <Properties>
+      <string name="Name">Teams</string>
+    </Properties>
+  </Item>
+  <Item class="SoundService" referent="RBX26">
+    <Properties>
+      <string name="Name">SoundService</string>
+    </Properties>
+  </Item>
+  <Item class="Chat" referent="RBX27">
+    <Properties>
+      <string name="Name">Chat</string>
+    </Properties>
+  </Item>
+  <Item class="HttpService" referent="RBX28">
+    <Properties>
+      <string name="Name">HttpService</string>
+    </Properties>
+  </Item>
+<Item class="Camera" referent="RBX200"><Properties><string name="Name">Camera</string></Properties></Item><Item class="MaterialService" referent="RBX201"><Properties><string name="Name">MaterialService</string></Properties></Item><Item class="TextChatService" referent="RBX202"><Properties><string name="Name">TextChatService</string></Properties></Item></roblox>
